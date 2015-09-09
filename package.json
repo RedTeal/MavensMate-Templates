@@ -222,12 +222,25 @@
             "name":"Unit Test",
             "file_name":"UnitTestApexClass.cls",
             "description":"Unit test class",
-            "author":"MavensMate",
+            "author":"jdcrensh",
             "params":[  
                 {  
                     "name":"api_name",
                     "description":"Apex Class API Name",
-                    "default":"MyApexClass"
+                    "default":"MyApexClassTest"
+                }
+            ]
+        },
+        {  
+            "name":"Unit Test with RT_Assert",
+            "file_name":"UnitTestApexClassRT.cls",
+            "description":"Unit test class",
+            "author":"jdcrensh",
+            "params":[  
+                {  
+                    "name":"api_name",
+                    "description":"Apex Class API Name",
+                    "default":"MyApexClassTest"
                 }
             ]
         },
