@@ -12,10 +12,7 @@
  *   https://developer.salesforce.com/page/Apex_Enterprise_Patterns_-_Service_Layer
  *
  **/
-public class {{ api_name }}
-{
-	public static void doSomething()
-	{
-
+public class {{ api_name }} {
+	public static void doSomething() {
 	}
 }

@@ -1,20 +1,17 @@
-public class {{ api_name }} 
-{
+public class {{ api_name }} {
     /**
      *   Enum representing each of before/after CRUD events on Sobjects
      */
-    public enum Evt 
-    {
-        afterdelete, afterinsert, afterundelete,
-        afterupdate, beforedelete, beforeinsert, beforeupdate   
+    public enum Evt {
+        AFTER_DELETE, AFTER_INSERT, AFTER_UNDELETE,
+        AFTER_UPDATE, BEFORE_DELETE, BEFORE_INSERT, BEFORE_UPDATE   
     }
 
     /*
      *   Simplistic handler to implement on any of the event. It doesn't require or enforces any pattern except the
      *   method name to be "handle()".
      */
-    public interface HandlerInterface
-    {
+    public interface HandlerInterface {
         void handle();          
     } 
 
@@ -24,11 +21,9 @@ public class {{ api_name }}
     /**
      *   Core API to bind handlers with events
      */
-    public {{ api_name }} bind(Evt event, HandlerInterface eh)
-    {
+    public {{ api_name }} bind(Evt event, HandlerInterface eh) {
         List<HandlerInterface> handlers = eventHandlerMapping.get(event.name());
-        if (handlers == null) 
-        {
+        if (handlers == null) {
             handlers = new List<HandlerInterface>();
             eventHandlerMapping.put(event.name(), handlers);
         }
@@ -39,44 +34,34 @@ public class {{ api_name }}
     /**
      *   Invokes correct handlers as per the context of Trigger and available registered handlers
      */
-    public void manage()
-    {
+    public void manage() {
         Evt ev = null;
-        if(Trigger.isInsert && Trigger.isBefore)
-        {
-            ev = Evt.beforeinsert;
+        if (Trigger.isInsert && Trigger.isBefore) {
+            ev = Evt.BEFORE_INSERT;
         }
-        else if(Trigger.isInsert && Trigger.isAfter)
-        {
-            ev = Evt.afterinsert;
+        else if (Trigger.isInsert && Trigger.isAfter) {
+            ev = Evt.AFTER_INSERT;
         }
-        else if(Trigger.isUpdate && Trigger.isBefore)
-        {
-            ev = Evt.beforeupdate;
+        else if (Trigger.isUpdate && Trigger.isBefore) {
+            ev = Evt.BEFORE_UPDATE;
         }
-        else if(Trigger.isUpdate && Trigger.isAfter)
-        {
-            ev = Evt.afterupdate;
+        else if (Trigger.isUpdate && Trigger.isAfter) {
+            ev = Evt.AFTER_UPDATE;
         }
-        else if(Trigger.isDelete && Trigger.isBefore)
-        {
-            ev = Evt.beforedelete;
+        else if (Trigger.isDelete && Trigger.isBefore) {
+            ev = Evt.BEFORE_DELETE;
         }
-        else if(Trigger.isDelete && Trigger.isAfter)
-        {
-            ev = Evt.afterdelete;
+        else if (Trigger.isDelete && Trigger.isAfter) {
+            ev = Evt.AFTER_DELETE;
         }
-        else if(Trigger.isundelete)
-        {
-            ev = Evt.afterundelete;             
+        else if (Trigger.isundelete) {
+            ev = Evt.AFTER_UNDELETE;             
         }
         
         List<HandlerInterface> handlers = eventHandlerMapping.get(ev.name());
         
-        if (handlers != null && ! handlers.isEmpty()) 
-        {
-            for (HandlerInterface h : handlers) 
-            {
+        if (handlers != null && ! handlers.isEmpty()) {
+            for (HandlerInterface h : handlers) {
                 h.handle();
             }
         }

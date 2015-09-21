@@ -17,5 +17,4 @@ global class {{ api_name }} implements Database.Batchable<sObject> {
 	global void finish(Database.BatchableContext BC) {
 		
 	}
-	
 }

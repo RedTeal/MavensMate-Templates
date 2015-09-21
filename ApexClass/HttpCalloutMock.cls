@@ -1,5 +1,4 @@
-@isTest
-public class {{ api_name }} implements HttpCalloutMock {
+@isTest public class {{ api_name }} implements HttpCalloutMock {
 
     protected Integer code;
     protected String status;
@@ -16,12 +15,12 @@ public class {{ api_name }} implements HttpCalloutMock {
     public HTTPResponse respond(HTTPRequest req) {
 
         HttpResponse res = new HttpResponse();
-        for (String key : this.responseHeaders.keySet()) {
-            res.setHeader(key, this.responseHeaders.get(key));
+        for (String key : responseHeaders.keySet()) {
+            res.setHeader(key, responseHeaders.get(key));
         }
-        res.setBody(this.body);
-        res.setStatusCode(this.code);
-        res.setStatus(this.status);
+        res.setBody(body);
+        res.setStatusCode(code);
+        res.setStatus(status);
         return res;
     }
 
