@@ -136,6 +136,34 @@
             ]
         },
         {  
+            "name":"Master-Detail Controller Extension",
+            "file_name":"MasterDetailController.cls",
+            "description":"Master-Detail Controller with child Item Wrapper",
+            "author":"jdcrensh",
+            "params":[  
+                {  
+                    "name":"api_name",
+                    "description":"Controller API Name",
+                    "default":"MasterDetailController"
+                },
+                {  
+                    "name":"master_name",
+                    "description":"API name of the Master Object",
+                    "default":"Order__c"
+                },
+                {  
+                    "name":"detail_name",
+                    "description":"API name of the Detail Object",
+                    "default":"Line_Item__c"
+                },
+                {
+                    "name":"master_field_name",
+                    "description":"API Name of the Detail Object's Master Field",
+                    "default": "Order__c"
+                }
+            ]
+        },
+        {  
             "name":"No Constructor",
             "file_name":"ApexClassNoConstructor.cls",
             "description":"The default template for an Apex Class",
@@ -323,6 +351,34 @@
                     "name":"api_name",
                     "description":"Visualforce Page API Name",
                     "default":"MyVisualforcePageName"
+                }
+            ]
+        },
+        {  
+            "name":"Master-Detail Page",
+            "file_name":"MasterDetailPage.page",
+            "description":"VF Page with a PageBlockTable for child items",
+            "author":"jdcrensh",
+            "params":[  
+                {  
+                    "name":"api_name",
+                    "description":"Page API Name",
+                    "default":"MasterDetailPage"
+                },
+                {  
+                    "name":"master_name",
+                    "description":"API name of the Master Object",
+                    "default":"Order__c"
+                },
+                {  
+                    "name":"detail_name",
+                    "description":"API name of the Detail Object",
+                    "default":"Line_Item__c"
+                },
+                {  
+                    "name":"controller_api_name",
+                    "description":"API name of the controller extension class",
+                    "default":"MasterDetailController"
                 }
             ]
         }
