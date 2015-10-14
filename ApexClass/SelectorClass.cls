@@ -11,6 +11,7 @@
  * https://developer.salesforce.com/page/Apex_Enterprise_Patterns_-_Selector_Layer
  **/
 public class {{ api_name }} extends fflib_SObjectSelector {
+
 	public List<Schema.SObjectField> getSObjectFieldList() {
 		return new List<Schema.SObjectField> {
 			{{ object_name }}.Id
@@ -21,8 +22,8 @@ public class {{ api_name }} extends fflib_SObjectSelector {
 		return {{ object_name }}.sObjectType;
 	}
 
-	public List<{{ object_name }}> selectById(Set<ID> idSet) {
-		return (List<{{ object_name }}>) selectSObjectsById(idSet);
+	public List<{{ object_name }}> selectById(Set<Id> ids) {
+		return (List<{{ object_name }}>) selectSObjectsById(ids);
 	}
 
 	/*

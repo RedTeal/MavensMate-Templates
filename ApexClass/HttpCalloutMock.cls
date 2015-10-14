@@ -12,7 +12,7 @@
         this.responseHeaders = responseHeaders;
     }
 
-    public HTTPResponse respond(HTTPRequest req) {
+    public HttpResponse respond(HttpRequest req) {
         HttpResponse res = new HttpResponse();
         for (String key : responseHeaders.keySet()) {
             res.setHeader(key, responseHeaders.get(key));

@@ -1,7 +1,7 @@
 {  
     "ApexClass":[  
         {  
-            "name":"Default",
+            "name":"Apex Class",
             "file_name":"ApexClass.cls",
             "description":"The default template for an Apex Class",
             "author":"MavensMate",
@@ -14,7 +14,7 @@
             ]
         },
         {  
-            "name":"ApexInterface",
+            "name":"Apex Interface",
             "file_name":"ApexInterface.cls",
             "description":"The default template for an Apex Interface",
             "author":"Amey Nevrekar",
@@ -40,7 +40,7 @@
             ]
         },
         {  
-            "name":"Batch",
+            "name":"Batchable",
             "file_name":"BatchApexClass.cls",
             "description":"Batch Apex Class",
             "author":"MavensMate",
@@ -49,19 +49,6 @@
                     "name":"api_name",
                     "description":"Apex Class API Name",
                     "default":"MyApexClass"
-                }
-            ]
-        },
-        {  
-            "name":"BDD Unit Test",
-            "file_name":"BDDUnitTestApexClass.cls",
-            "description":"Behaviour Driven Development Unit test class",
-            "author":"Paul Hardaker @comic96",
-            "params":[  
-                {  
-                    "name":"api_name",
-                    "description":"Apex Class API Name",
-                    "default":"MyBDDClass"
                 }
             ]
         },
@@ -97,7 +84,7 @@
             ]
         },
         {  
-            "name":"DomainClass",
+            "name":"FFLib Domain Class",
             "file_name":"DomainClass.cls",
             "description":"Apex Enterprise Patterns Domain Class",
             "author":"Andy Fawcett @andyinthecloud",
@@ -105,12 +92,12 @@
                 {  
                     "name":"api_name",
                     "description":"Domain class name (typically plural)",
-                    "default":"Invoices"
+                    "default":"Accounts"
                 },
                 {  
                     "name":"object_name",
                     "description":"API name of the Standard or Custom Object",
-                    "default":"Invoice__c"
+                    "default":"Account"
                 }
             ]
         },
@@ -169,19 +156,6 @@
             ]
         },
         {  
-            "name":"No Constructor",
-            "file_name":"ApexClassNoConstructor.cls",
-            "description":"The default template for an Apex Class",
-            "author":"MavensMate",
-            "params":[  
-                {  
-                    "name":"api_name",
-                    "description":"Apex Class API Name",
-                    "default":"MyApexClass"
-                }
-            ]
-        },
-        {  
             "name":"Schedulable",
             "file_name":"SchedulableApexClass.cls",
             "description":"A Schedulable class",
@@ -195,7 +169,7 @@
             ]
         },
         {  
-            "name":"SelectorClass",
+            "name":"FFLib Selector Class",
             "file_name":"SelectorClass.cls",
             "description":"Apex Enterprise Patterns Selector Class",
             "author":"Andy Fawcett @andyinthecloud",
@@ -213,7 +187,7 @@
             ]
         },
         {  
-            "name":"ServiceClass",
+            "name":"FFLib Service Class",
             "file_name":"ServiceClass.cls",
             "description":"Apex Enterprise Patterns Selector Class",
             "author":"Andy Fawcett @andyinthecloud",
@@ -379,13 +353,13 @@
         {  
             "name":"Apex Trigger",
             "file_name":"ApexTrigger.trigger",
-            "description":"Basic Apex Trigger template",
-            "author":"MavensMate",
+            "description":"Bulkified Apex Trigger template",
+            "author":"jdcrensh",
             "params":[  
                 {  
                     "name":"api_name",
                     "description":"Apex Trigger API Name",
-                    "default":"MyCoolTrigger"
+                    "default":"Accounts"
                 },
                 {  
                     "name":"object_name",
@@ -395,43 +369,7 @@
             ]
         },
         {  
-            "name":"Apex Trigger - All Events",
-            "file_name":"ApexTriggerAllEvents.trigger",
-            "description":"Apex Trigger with all Trigger events",
-            "author":"@alexander-brett",
-            "params":[  
-                {  
-                    "name":"api_name",
-                    "description":"Apex Trigger API Name",
-                    "default":"MyCoolTrigger"
-                },
-                {  
-                    "name":"object_name",
-                    "description":"Object API Name",
-                    "default":"Account"
-                }
-            ]
-        },
-        {  
-            "name":"Apex Trigger - Bulkified",
-            "file_name":"ApexTriggerBulk.trigger",
-            "description":"Bulk Apex Trigger with all Trigger events",
-            "author":"David Schach @dschach",
-            "params":[  
-                {  
-                    "name":"api_name",
-                    "description":"Apex Trigger API Name",
-                    "default":"MyCoolTrigger"
-                },
-                {  
-                    "name":"object_name",
-                    "description":"Object API Name",
-                    "default":"Account"
-                }
-            ]
-        },
-        {  
-            "name":"DomainTrigger",
+            "name":"FFLib Domain Trigger",
             "file_name":"DomainTrigger.trigger",
             "description":"Apex Enterprise Patterns Domain Trigger",
             "author":"Andy Fawcett @andyinthecloud",
@@ -439,12 +377,12 @@
                 {  
                     "name":"api_name",
                     "description":"Domain trigger name, must be same as Domain class name",
-                    "default":"Invoices"
+                    "default":"Accounts"
                 },
                 {  
                     "name":"object_name",
                     "description":"API name of the Standard or Custom Object",
-                    "default":"Invoice__c"
+                    "default":"Account"
                 }
             ]
         }

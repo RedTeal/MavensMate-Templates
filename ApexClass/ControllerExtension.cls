@@ -5,7 +5,7 @@ public with sharing class {{ api_name }} {
 	
 	public {{ api_name }}(ApexPages.StandardController sc) {
 		this.sc = sc;
-		if (!Test.isRunningTest()) {
+		if (!Test.isRunningTest()) { // sc.addFields() unallowed in unit tests
 			sc.addFields('Name,CreatedDate'.split(','));
 			record = ({{ sobjecttype }}) sc.getRecord();
 		}
