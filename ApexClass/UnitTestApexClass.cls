@@ -1,8 +1,9 @@
-@isTest private class {{ api_name }} {
+@isTest
+private class {{ api_name }} {
 
 	@testSetup static void setup() {
 	}
 	
-	@isTest static void test() {
+	@isTest static void testIt() {
 	}
 }

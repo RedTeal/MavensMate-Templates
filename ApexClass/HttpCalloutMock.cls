@@ -1,5 +1,5 @@
 @isTest public class {{ api_name }} implements HttpCalloutMock {
-
+    
     protected Integer code;
     protected String status;
     protected String body;
@@ -13,7 +13,6 @@
     }
 
     public HTTPResponse respond(HTTPRequest req) {
-
         HttpResponse res = new HttpResponse();
         for (String key : responseHeaders.keySet()) {
             res.setHeader(key, responseHeaders.get(key));

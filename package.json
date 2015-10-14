@@ -69,12 +69,17 @@
             "name":"Controller Extension",
             "file_name":"ControllerExtension.cls",
             "description":"Controller extension Apex Class",
-            "author":"David Schach @dschach",
+            "author":"jdcrensh",
             "params":[  
                 {  
                     "name":"api_name",
                     "description":"Apex Class API Name",
-                    "default":"MyApexClass"
+                    "default":"MyAccountController"
+                },
+                {
+                    "name":"sobjecttype",
+                    "description":"API Name of the Standard Controller's SObjectType",
+                    "default":"Account"
                 }
             ]
         },
@@ -249,19 +254,6 @@
         {  
             "name":"Unit Test",
             "file_name":"UnitTestApexClass.cls",
-            "description":"Unit test class",
-            "author":"jdcrensh",
-            "params":[  
-                {  
-                    "name":"api_name",
-                    "description":"Apex Class API Name",
-                    "default":"MyApexClassTest"
-                }
-            ]
-        },
-        {  
-            "name":"Unit Test with RT_Assert",
-            "file_name":"UnitTestApexClassRT.cls",
             "description":"Unit test class",
             "author":"jdcrensh",
             "params":[  

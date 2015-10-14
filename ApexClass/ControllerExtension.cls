@@ -1,15 +1,16 @@
 public with sharing class {{ api_name }} {
 
-	private final sObject mysObject;
-
-    // The extension constructor initializes the private member
-    // variable mysObject by using the getRecord method from the standard
-    // controller.
-    public {{ api_name }}(ApexPages.StandardController stdController) {
-        this.mysObject = (sObject)stdController.getRecord();
-    }
-
-    public String getRecordName() {
-        return 'Hello ' + (String)mysObject.get('name') + ' (' + (Id)mysObject.get('Id') + ')';
-    }
+	private ApexPages.StandardController sc;
+	private {{ sobjecttype }} record;
+	
+	public {{ api_name }}(ApexPages.StandardController sc) {
+		this.sc = sc;
+		if (!Test.isRunningTest()) {
+			sc.addFields('Name,CreatedDate'.split(','));
+			record = ({{ sobjecttype }}) sc.getRecord();
+		}
+		else {
+            record = [ SELECT Id, Name, CreatedDate FROM {{ sobjecttype }} WHERE Id = :sc.getId() ];
+		}
+	}
 }
