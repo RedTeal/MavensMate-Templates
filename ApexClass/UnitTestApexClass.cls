@@ -1,5 +1,4 @@
-@isTest
-private class {{ api_name }} {
+@isTest class {{ api_name }} {
 
 	@testSetup static void setup() {
 	}
