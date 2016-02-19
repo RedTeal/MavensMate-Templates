@@ -1,11 +1,4 @@
 /**
- * See https://github.com/financialforcedev/fflib-apex-common for more info
- *
- * Install library via
- *   https://githubsfdeploy.herokuapp.com/app/githubdeploy/financialforcedev/fflib-apex-common
- */
-
-/**
  * Encapsulates all behaviour logic relating to the {{ object_name }} object
  *
  * For more guidelines and details see
