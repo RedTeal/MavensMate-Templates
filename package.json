@@ -347,6 +347,19 @@
                     "default":"MasterDetailController"
                 }
             ]
+        },
+        {
+            "name":"Bare Visualforce Page",
+            "file_name":"BarePage.page",
+            "description":"A bare VF page without HTML tags",
+            "author":"jdcrensh",
+            "params":[
+                {
+                    "name":"api_name",
+                    "description":"Page API Name",
+                    "default":"MyBarePage"
+                }
+            ]
         }
     ],
     "ApexTrigger":[  

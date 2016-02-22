@@ -1,0 +1,13 @@
+<apex:page docType="html-5.0" applyHtmlTag="false" applyBodyTag="false"
+           showHeader="false" sidebar="false" standardStylesheets="false"
+           title="Unused Title">
+<html>
+	<head>
+		<title>{{ api_name }}</title>
+	</head>
+	<body>
+		<h1>{{ api_name }}</h1>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+	</body>
+</html>
+</apex:page>
