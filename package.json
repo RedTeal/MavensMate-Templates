@@ -1,7 +1,7 @@
 {  
     "ApexClass":[  
         {  
-            "name":"Apex Class",
+            "name":"Default",
             "file_name":"ApexClass.cls",
             "description":"The default template for an Apex Class",
             "author":"MavensMate",
@@ -53,6 +53,19 @@
             ]
         },
         {  
+            "name":"BDD Unit Test",
+            "file_name":"BDDUnitTestApexClass.cls",
+            "description":"Behaviour Driven Development Unit test class",
+            "author":"Paul Hardaker @comic96",
+            "params":[  
+        {  
+                    "name":"api_name",
+                    "description":"Apex Class API Name",
+                    "default":"MyBDDClass"
+                }
+            ]
+        },
+        {  
             "name":"Controller Extension",
             "file_name":"ControllerExtension.cls",
             "description":"Controller extension Apex Class",
@@ -84,7 +97,48 @@
             ]
         },
         {  
-            "name":"FFLib Domain Class",
+            "name":"Custom Iterable",
+            "file_name":"CustomIterable.cls",
+            "description":"A custom iterable class",
+            "author":"Jean-Philippe Monette @jpmonette",
+            "params":[ 
+        {  
+                    "name":"api_name",
+                    "description":"Apex Class API Name",
+                    "default":"MyCustomIterable"
+                },
+                {  
+                    "name":"type_name",
+                    "description":"Type name",
+                    "default":"Account"
+                },
+                {  
+                    "name":"iterator_class_name",
+                    "description":"Iterator Apex Class API Name",
+                    "default":"MyCustomIteror"
+                }
+            ]
+        },
+        {  
+            "name":"Custom Iterator",
+            "file_name":"CustomIterator.cls",
+            "description":"A custom iterator class",
+            "author":"Jean-Philippe Monette @jpmonette",
+            "params":[ 
+                {  
+                    "name":"api_name",
+                    "description":"Apex Class API Name",
+                    "default":"MyCustomIterable"
+                },
+                {  
+                    "name":"type_name",
+                    "description":"Type name",
+                    "default":"Account"
+                }
+            ]
+        },
+        {  
+            "name":"DomainClass",
             "file_name":"DomainClass.cls",
             "description":"Apex Enterprise Patterns Domain Class",
             "author":"Andy Fawcett @andyinthecloud",
@@ -92,12 +146,53 @@
                 {  
                     "name":"api_name",
                     "description":"Domain class name (typically plural)",
-                    "default":"Accounts"
+                    "default":"Invoices"
                 },
                 {  
                     "name":"object_name",
                     "description":"API name of the Standard or Custom Object",
-                    "default":"Account"
+                    "default":"Invoice__c"
+                }
+            ]
+        },
+        {  
+            "name":"DomainObjectBuilder",
+            "file_name":"DomainObjectBuilderClass.cls",
+            "description":"Apex Enterprise Patterns Domain Object Builder Class",
+            "author":"Jon Davis @jondavis9898",
+            "params":[  
+                {  
+                    "name":"api_name",
+                    "description":"Domain Object Builder class name",
+                    "default":"Invoice_t"
+                },
+                {  
+                    "name":"base_name",
+                    "description":"Domain Object Builder Base class name",
+                    "default":"Domain_t"
+                },
+                {  
+                    "name":"object_name",
+                    "description":"API name of the Standard or Custom Object",
+                    "default":"Invoice__c"
+                },
+                {  
+                    "name":"mother_name",
+                    "description":"Method name for empty Builder Object Mother method",
+                    "default":"anInvoice"
+                }                
+            ]
+        },        
+        {  
+            "name":"DomainObjectBuilderBase",
+            "file_name":"DomainObjectBuilderBaseClass.cls",
+            "description":"Apex Enterprise Patterns Domain Object Builder Base Class",
+            "author":"Jon Davis @jondavis9898",
+            "params":[  
+                {  
+                    "name":"api_name",
+                    "description":"Domain Object Builder Base class name",
+                    "default":"Domain_t"
                 }
             ]
         },
@@ -118,6 +213,19 @@
             "name":"HTTP Callout Mock",
             "file_name":"HttpCalloutMock.cls",
             "description":"Http callout mock class",
+            "author":"MavensMate",
+            "params":[  
+                {  
+                    "name":"api_name",
+                    "description":"Apex Class API Name",
+                    "default":"MyApexClass"
+                }
+            ]
+        },
+        {  
+            "name":"No Constructor",
+            "file_name":"ApexClassNoConstructor.cls",
+            "description":"The default template for an Apex Class",
             "author":"MavensMate",
             "params":[  
                 {  
@@ -152,6 +260,42 @@
                     "name":"master_field_name",
                     "description":"API Name of the Detail Object's Master Field",
                     "default": "Order__c"
+                }
+            ]
+        },
+        {  
+            "name":"Queueable",
+            "file_name":"QueueableApexClass.cls",
+            "description":"A Queueable class",
+            "author":"Michael Fairchild",
+            "params":[  
+                {  
+                    "name":"api_name",
+                    "description":"Apex Class API Name",
+                    "default":"MyQueueableApexClass"
+                }
+            ]
+                },
+                {  
+            "name":"RestResource",
+            "file_name":"RestResourceApexClass.cls",
+            "description":"A RestResource class",
+            "author":"Michael Fairchild",
+            "params":[
+                {
+                    "name":"api_name",
+                    "description":"Apex Class API Name",
+                    "default":"MyRestResourceApexClass"
+                },
+                {  
+                    "name":"object_name",
+                    "description":"API name of the Standard or Custom Object",
+                    "default":"Contact"
+                },
+                {
+                    "name":"url",
+                    "description":"URL Mapping",
+                    "default":"contact"
                 }
             ]
         },
@@ -222,6 +366,24 @@
                     "name":"api_name",
                     "description":"Apex Class API Name",
                     "default":"MyApexClass"
+                }
+            ]
+        },
+        {
+            "name":"Trigger Handler - Comprehensive",
+            "file_name":"TriggerHandlerComprehensive.cls",
+            "description":"An class that handles all variations of trigger processing, including asynchronous processing",
+            "author":"Mike Leach @dlog",
+            "params":[
+                {
+                    "name":"api_name",
+                    "description":"Apex Class API Name",
+                    "default":"MyApexClass"
+                },
+                {
+                    "name":"object_name",
+                    "description":"Object API Name",
+                    "default":"Account"
                 }
             ]
         },
